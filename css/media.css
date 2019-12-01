@@ -1,0 +1,126 @@
+@media (min-width: 1000px) and (max-width: 1299.8px) {
+	aside ul li a {
+		font-size: 14px;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	main .container .founder_box .founder_box_text {
+		font-size: 14px;
+	}
+}
+
+@media (min-width: 800px) and (max-width: 999.8px) {
+	aside {
+		width: 22%;
+	}
+
+	aside ul li a {
+		font-size: 14px;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	main {
+		width: 78%;
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+
+	main .container {
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+	}
+
+	main .container .founder_box {
+		order: -1;
+		margin-bottom: 50px;
+		width: 100%;
+	}
+
+	main .container .form_box {
+		width: 100%;
+	}
+
+	footer {
+		padding-left: 15px;
+		width: 78%;
+	}
+}
+
+@media (max-width: 799.8px) {
+
+	.menu {
+		display: block;
+		width: 24px;
+		height: 18px;
+		position: absolute;
+		left: 25px;
+		top: 40px;
+		border: none;
+		background-color: inherit;
+		background-image: url(../img/menu.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		cursor: pointer
+	}
+
+	aside {
+		margin-left: -190px;
+		transition-property: all;
+	  	transition: all ease 1s;
+	  	z-index: 1;
+	}
+
+	.menu:focus + aside {
+		width: 35%;
+		transform: translateX(190px);
+	}
+
+	aside ul li a {
+		font-size: 14px;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	main {
+		width: 100%;
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+
+	main .title {
+		margin-left: 40px;
+	}
+
+	main .container {
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+	}
+
+	main .container .founder_box {
+		order: -1;
+		margin-bottom: 50px;
+		width: 100%;
+	}
+
+	main .container .form_box {
+		width: 100%;
+	}
+
+	footer {
+		padding-left: 0;
+		width: 100%;
+	}
+
+	footer .footer_container ul {
+		padding-left: 0;
+	}
+}

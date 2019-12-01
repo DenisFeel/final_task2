@@ -1,0 +1,240 @@
+$white: #ffffff
+
+$gray: #e3e3e3
+
+$darkgray: #909090
+
+$shadowcolor: rgba(0, 0, 0, 0.3)
+
+$green: #448b00
+
+$yellow: #d89e24
+
+$blue: #274d97
+
+$pink: #c32056
+
+$black: #000000
+
+%flex
+	display: flex
+	align-items: center
+
+%absolute
+	position: absolute
+	top: -20px
+	left: 20px
+
+
+body
+	margin: 0
+	padding: 0
+	font-family: Arial, sans-serif
+	background-color: #eaeaea
+
+.title
+	font-size: 24px
+	padding: 35px
+	margin: 0
+	font-weight: bold
+	color: $black
+	
+.menu 
+	display: none
+
+aside
+	width: 17%
+	height: 100%
+	position: fixed
+	box-shadow: 5px 0 5px 0 $shadowcolor
+	background-color: $white
+	ul
+		padding: 25px 18px
+		margin: 0
+		list-style-type: none
+		border-top: 3px solid $gray
+		li
+			a
+				padding: 20px 28px
+				color: $darkgray
+				text-decoration: none
+				@extend %flex
+				align-items: flex-end
+			a:before
+				content: ""
+				display: inline-block
+				width: 24px
+				height: 24px
+				background-repeat: no-repeat
+				background-position: center center
+				background-size: cover
+				margin-right: 20px
+			.active, a:hover
+				background-color: $pink
+				box-shadow: 2px 2px 2px 1px $shadowcolor
+				color: $white
+			.active:before
+				background-image: url(../img/account_white.svg) !important
+		li:first-child
+			a:before
+				background-image: url(../img/dashboard_gray.svg)
+		li:nth-child(2)
+			a:before
+				background-image: url(../img/account_gray.svg)
+		li:nth-child(3)
+			a:before
+				background-image: url(../img/map_gray.svg)
+		li:nth-child(4)
+			a:before
+				background-image: url(../img/notify_gray.svg)
+		li:nth-child(5)
+			a:before
+				background-image: url(../img/support_gray.svg)
+		li:hover:first-child
+			a:before
+				background-image: url(../img/dashboard_white.svg)
+		li:hover:nth-child(2)
+			a:before
+				background-image: url(../img/account_white.svg)
+		li:hover:nth-child(3)
+			a:before
+				background-image: url(../img/map_white.png)
+				background-size: 14px
+		li:hover:nth-child(4)
+			a:before
+				background-image: url(../img/notify_white.png)
+				background-size: 24px
+		li:hover:nth-child(5)
+			a:before
+				background-image: url(../img/support_white.png)
+				background-size: 20px
+main 
+	width: 83%
+	float: right
+	padding: 35px  38px
+	padding-bottom: 0
+	box-sizing: border-box
+	margin-bottom: 50px
+	.title
+		padding: 0
+		margin-bottom: 50px
+	.container
+		@extend %flex
+		align-items: flex-start
+		justify-content: space-between
+		.form_box
+			width: 70%
+			position: relative
+			box-shadow: 2px 2px 2px 1px $shadowcolor
+			padding-top: 50px
+			background-color: $white
+			.edit
+				@extend %absolute
+				right: 20px
+				background-color: $pink
+				box-shadow: 2px 2px 2px 1px $shadowcolor
+				padding-left: 20px
+				color: $white
+				.edit_info
+					font-size: 14px
+			form
+				padding: 20px
+				font-size: 14px
+				p
+					@extend %flex
+					justify-content: space-between
+					label
+						width: 31%
+						color: $darkgray
+						font-weight: 550
+						margin-top: 10px
+						input, textarea
+							width: 100%
+							padding-top: 10px
+							margin-top: 10px
+							border: none
+							border-bottom: 2px solid $gray
+				p:nth-child(2)
+					label
+						width: 48%
+				p:nth-child(3)
+					label
+						width: 100%	
+				p:nth-child(4)
+					label
+						width: 31%
+				p:nth-child(5)
+					label
+						width: 100%
+				p:last-child
+					justify-content: flex-end
+					button 
+						margin-top: 10px
+						padding: 12px 60px
+						font-size: 14px
+						color: $white
+						background-color: $pink
+						border: none
+						cursor: pointer
+						box-shadow: 1px 2px 2px 1px $shadowcolor
+		.founder_box
+			width: 28%
+			@extend %flex
+			flex-direction: column
+			box-shadow: 2px 2px 2px 1px $shadowcolor
+			background-color: $white
+			padding: 20px 30px
+			padding-top: 0
+			box-sizing: border-box
+			img
+				border-radius: 50%
+				margin-top: -50px
+				box-shadow: 2px 2px 5px 3px $shadowcolor
+			p
+				margin: 0
+				margin-top: 20px
+			.founder_box_ceo
+				font-size: 12px
+				color: $darkgray	
+			.founder_box_name
+				font-weight: bold
+			.founder_box_text
+				color: $darkgray
+				text-align: center
+
+footer 
+	width: 83%
+	float: right
+	padding-top: 0
+	box-sizing: border-box
+	.footer_container
+		@extend %flex
+		justify-content: space-between
+		border-top: 2px solid #d5d5d5
+		padding: 26px  15px
+		padding-left: 35px
+		ul
+			@extend %flex
+			padding-left: 20px
+			list-style-type: none
+			margin-top: 0
+			margin-bottom: 0
+			a
+				color: $black
+				text-decoration: none
+				font-weight: bold
+				margin-right: 30px
+				font-size: 14px
+			a:hover
+				text-decoration: underline
+		.made
+			margin: 0
+			margin-right: 20px
+			color: $black
+
+[class$="box_block"]
+	background-color: $white
+
+
+
+
